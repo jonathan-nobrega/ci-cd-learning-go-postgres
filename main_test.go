@@ -38,7 +38,7 @@ func DeletaAlunoMock() {
 func TestVerificaStatusCodeDaSaudacaoComParametro(t *testing.T) {
 	r := SetupDasRotasDeTeste()
 	r.GET("/:nome", controllers.Saudacoes)
-	req, _ := http.NewRequest("GET", "/gui", nil)
+	req, _ := http.NewRequest("GET", "/jon", nil)
 	resposta := httptest.NewRecorder()
 	r.ServeHTTP(resposta, req)
 	assert.Equal(t, http.StatusOK, resposta.Code, "Deveriam ser iguais")
